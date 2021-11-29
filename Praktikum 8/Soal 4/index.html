@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Laurentius Gusti Ontoseno Panata Yudha-2172028">
+    <title>Soal 4</title>
+    <style>
+    table {
+        border-spacing:0px;
+        
+    }
+    td {
+        width: 40px;
+        height: 10px;
+        font-size: 20px;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <script>
+        let baris = prompt("Jumlah Baris:");
+        let kolom = prompt("Jumlah Kolom:");
+        let warna1 = prompt("Warna 1 (Hexdeximal):");
+        let warna2 = prompt("Warna 2 (Hexdeximal):");
+        let a=1;
+        let e;
+        document.write ("<table>");
+        while (a<= baris) {
+            e=a%2
+            document.write ("<tr>"); 
+            
+            for (let b=1; b<= kolom; b++) {
+                let d= b%2
+            if ((d==1) && (e==1)) {
+                document.write ("<td style=' background-color: #"+ warna2 + ";'>"+a*b+"</td>"); 
+            }
+            if ((d==1) && (e==0)) {
+                document.write ("<td style=' background-color: #"+ warna1 + ";'>"+a*b+"</td>"); 
+            }
+            if ((d==0) && (e==1)) {
+                document.write ("<td style=' background-color: #"+ warna1 + ";'>"+a*b+"</td>"); 
+            }
+            if ((d==0) && (e==0)) {
+                document.write ("<td style=' background-color: #"+ warna2 + ";'>"+a*b+"</td>"); 
+            }
+            }
+            document.write ("</tr>"); 
+            a++;
+        }
+    
+            document.write ("</table>");
+
+    </script>
+</body>
+</html>
